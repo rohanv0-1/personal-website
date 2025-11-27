@@ -1,15 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 export function ChatResponse({
   prompt,
   answer,
   richAnswer,
-  loadingMs = 700,
   speed = 16,
   showPrompt = true,
 }) {
-  const [phase, setPhase] = useState("loading");
   const [displayed, setDisplayed] = useState("");
 
   const tokens = useMemo(() => {
@@ -18,39 +15,33 @@ export function ChatResponse({
   }, [richAnswer]);
 
   useEffect(() => {
-    setPhase("loading");
     setDisplayed("");
-    const loadingTimer = setTimeout(() => setPhase("typing"), loadingMs);
-    return () => clearTimeout(loadingTimer);
-  }, [prompt, answer, richAnswer, loadingMs]);
+    const content = richAnswer ?? answer ?? "";
+    const useTokens = Boolean(tokens && tokens.length);
+    if (!content.length) return;
 
-  useEffect(() => {
-    if (phase !== "typing") return;
     let index = 0;
     const interval = setInterval(() => {
       index += 1;
-      if (tokens) {
+      if (useTokens) {
         setDisplayed(tokens.slice(0, index).join(""));
         if (index >= tokens.length) {
           clearInterval(interval);
-          setPhase("done");
         }
         return;
       }
       setDisplayed(answer.slice(0, index));
-      if (index >= answer.length) {
+      if (index >= content.length) {
         clearInterval(interval);
-        setPhase("done");
       }
     }, speed);
     return () => clearInterval(interval);
-  }, [phase, answer, tokens, speed]);
+  }, [prompt, answer, richAnswer, tokens, speed]);
 
-  const isLoading = phase === "loading";
   const hasRichAnswer = Boolean(richAnswer);
 
   return (
-    <div className="chat-shell" aria-live="polite" role="status">
+    <div className="chat-shell" aria-live="polite">
       {showPrompt && prompt && (
         <div className="chat-bubble prompt">
           <div className="chat-meta">You</div>
@@ -59,32 +50,13 @@ export function ChatResponse({
       )}
       <div className="chat-bubble response">
         <div className="chat-stream">
-          <AnimatePresence initial={false}>
-            {isLoading && (
-              <motion.div
-                key="dots"
-                className="typing-dots"
-                initial={{ opacity: 0, y: 4 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -4 }}
-                transition={{ duration: 0.2 }}
-                aria-label="ChatGPT is thinking"
-              >
-                <span />
-                <span />
-                <span />
-              </motion.div>
-            )}
-          </AnimatePresence>
           {hasRichAnswer ? (
             <span
-              className={`stream-text ${isLoading ? "sr-only" : ""}`}
+              className="stream-text"
               dangerouslySetInnerHTML={{ __html: displayed }}
             />
           ) : (
-            <span className={`stream-text ${isLoading ? "sr-only" : ""}`}>
-              {displayed}
-            </span>
+            <span className="stream-text">{displayed}</span>
           )}
         </div>
       </div>

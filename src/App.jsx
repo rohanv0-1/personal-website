@@ -1,39 +1,33 @@
-import { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
-import './App.css'
-import Experience from './pages/Experience'
-import Blog from './pages/Blog'
-import Post from './pages/Post'
-import About from './pages/About'
-import { AppShell } from './components/AppShell'
-import { ChatResponse } from './components/ChatResponse'
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import "./App.css";
+import Experience from "./pages/Experience";
+import Blog from "./pages/Blog";
+import Post from "./pages/Post";
+import About from "./pages/About";
+import { AppShell } from "./components/AppShell";
+import { ChatResponse } from "./components/ChatResponse";
 
 function ScrollToTop() {
-  const location = useLocation()
+  const location = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [location.pathname])
-  return null
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+  return null;
 }
 
 function NotFound() {
   return (
     <div className="container page">
-      <ChatResponse
-        prompt="Can you find that page?"
-        answer="I looked around but couldn’t find it. Let’s head back to the main routes."
-        richAnswer={'<p>I looked around but couldn’t find that page.</p><p><a href="/">Return home</a> or hop into the nav links above.</p>'}
-      />
-      <div className="eyebrow">Not found</div>
       <h2>Page missing</h2>
       <p className="muted">The page you were looking for does not exist.</p>
     </div>
-  )
+  );
 }
 
 export default function App() {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <>
@@ -51,5 +45,5 @@ export default function App() {
         </Routes>
       </AnimatePresence>
     </>
-  )
+  );
 }
