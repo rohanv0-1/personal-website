@@ -1,6 +1,5 @@
 import { PageTransition } from "../components/PageTransition";
 import { Section } from "../components/Section";
-import { quickFacts } from "../data/siteData";
 
 export default function About() {
   return (
@@ -20,14 +19,6 @@ export default function About() {
                 I’ve led small teams, built design systems, and shaped motion to
                 keep interfaces calm.
               </p>
-            </div>
-            <div className="about-facts">
-              {quickFacts.map((fact) => (
-                <div key={fact.label} className="fact">
-                  <div className="eyebrow">{fact.label}</div>
-                  <p>{fact.value}</p>
-                </div>
-              ))}
             </div>
           </div>
         </Section>

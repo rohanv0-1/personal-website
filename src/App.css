@@ -198,7 +198,7 @@
     position: fixed;
     top: 76px;
     right: 1.4rem;
-    background: #ffffff;
+    background: var(--bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 0.8rem;
