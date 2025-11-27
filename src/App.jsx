@@ -7,6 +7,7 @@ import Blog from './pages/Blog'
 import Post from './pages/Post'
 import About from './pages/About'
 import { AppShell } from './components/AppShell'
+import { ChatResponse } from './components/ChatResponse'
 
 function ScrollToTop() {
   const location = useLocation()
@@ -19,6 +20,11 @@ function ScrollToTop() {
 function NotFound() {
   return (
     <div className="container page">
+      <ChatResponse
+        prompt="Can you find that page?"
+        answer="I looked around but couldn’t find it. Let’s head back to the main routes."
+        richAnswer={'<p>I looked around but couldn’t find that page.</p><p><a href="/">Return home</a> or hop into the nav links above.</p>'}
+      />
       <div className="eyebrow">Not found</div>
       <h2>Page missing</h2>
       <p className="muted">The page you were looking for does not exist.</p>

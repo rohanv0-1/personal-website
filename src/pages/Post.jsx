@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
+import { ChatResponse } from "../components/ChatResponse";
 import { Tag } from "../components/UI";
 import { posts } from "../data/siteData";
 
@@ -13,6 +14,11 @@ export default function Post() {
     return (
       <PageTransition>
         <div className="container page">
+          <ChatResponse
+            prompt="Can you pull up this post?"
+            answer="I couldn’t find that one, but you can head back to the writing list."
+            richAnswer={'<p>I couldn’t find that one.</p><p><a href="/blog">Head back to the writing list</a> for everything available.</p>'}
+          />
           <div className="eyebrow">Writing</div>
           <h2>Post not found</h2>
           <Link className="nav-link" to="/blog">
@@ -26,6 +32,11 @@ export default function Post() {
   return (
     <PageTransition>
       <div className="container page post">
+        <ChatResponse
+          prompt={`Give me the quick take on “${post.title}”.`}
+          answer={post.excerpt}
+          richAnswer={`<p><strong>${post.title}</strong> in a sentence:</p><p>${post.excerpt}</p>`}
+        />
         <div className="eyebrow">
           {post.date} · {post.readTime}
         </div>
