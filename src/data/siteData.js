@@ -12,6 +12,7 @@ export const experiences = [
   {
     role: "Senior Software Engineer",
     company: "Minimal Labs",
+    companyUrl: "https://meta.com",
     period: "2022 — Present",
     summary: "Design-forward front-ends and lightweight systems.",
     tags: ["React", "TypeScript", "Design systems"],
@@ -31,6 +32,22 @@ export const experiences = [
     tags: ["Node", "Next.js", "Content"],
   },
 ];
+
+export const experienceAnswer = "Here’s the recent run of roles.";
+
+export const experienceRichAnswer = (() => {
+  const items = experiences
+    .map(({ role, company, companyUrl, period, summary, tags }) => {
+      const companyLabel = companyUrl
+        ? `<a href="${companyUrl}" target="_blank" rel="noreferrer">${company}</a>`
+        : company;
+      return `<li><strong>${role}</strong> at ${companyLabel} <span class="muted">(${period})</span><br/><span class="muted">${summary}</span><br/><small>${tags.join(
+        " · "
+      )}</small></li>`;
+    })
+    .join("");
+  return `<p>${experienceAnswer}</p><ul>${items}</ul>`;
+})();
 
 export const posts = [
   {

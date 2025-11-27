@@ -42,6 +42,44 @@
   border-radius: 50%;
   background: var(--accent);
   box-shadow: none;
+  display: inline-block;
+  transform-origin: center;
+  animation: brand-pulse 8s ease-in-out infinite;
+}
+
+@keyframes brand-pulse {
+  0% {
+    background: #111827;
+    transform: scale(1);
+  }
+  15% {
+    background: #1f2937;
+    transform: scale(1.05);
+  }
+  30% {
+    background: #374151;
+    transform: scale(1.08);
+  }
+  45% {
+    background: #4b5563;
+    transform: scale(1.1);
+  }
+  60% {
+    background: #6b7280;
+    transform: scale(1.08);
+  }
+  75% {
+    background: #9ca3af;
+    transform: scale(1.06);
+  }
+  88% {
+    background: #d1d5db;
+    transform: scale(1.02);
+  }
+  100% {
+    background: #111827;
+    transform: scale(1);
+  }
 }
 
 .nav {

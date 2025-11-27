@@ -88,14 +88,13 @@ button {
 }
 
 .chat-bubble {
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius);
   padding: 0.95rem 1rem;
   background: var(--bg);
 }
 
 .chat-bubble.prompt {
-  border-style: dashed;
 }
 
 .chat-meta {
@@ -117,6 +116,49 @@ button {
 .stream-text {
   white-space: pre-wrap;
   line-height: 1.6;
+}
+
+.stream-text h2 {
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.01em;
+}
+
+.stream-text h3 {
+  font-size: 1.05rem;
+  margin: 0.6rem 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+
+.stream-text p {
+  margin: 0 0 0.5rem 0;
+}
+
+.stream-text a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(31, 41, 51, 0.08),
+    rgba(31, 41, 51, 0.08)
+  );
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: color 160ms ease, background-size 180ms ease;
+}
+
+.stream-text a:hover {
+  color: var(--accent);
+  background-size: 100% 100%;
+}
+
+.stream-text ul {
+  margin: 0.4rem 0 0.6rem 1.1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
 }
 
 .typing-dots {

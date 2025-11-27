@@ -7,6 +7,7 @@ export function ChatResponse({
   richAnswer,
   loadingMs = 700,
   speed = 16,
+  showPrompt = true,
 }) {
   const [phase, setPhase] = useState("loading");
   const [displayed, setDisplayed] = useState("");
@@ -50,12 +51,13 @@ export function ChatResponse({
 
   return (
     <div className="chat-shell" aria-live="polite" role="status">
-      <div className="chat-bubble prompt">
-        <div className="chat-meta">You</div>
-        <p>{prompt}</p>
-      </div>
+      {showPrompt && prompt && (
+        <div className="chat-bubble prompt">
+          <div className="chat-meta">You</div>
+          <p>{prompt}</p>
+        </div>
+      )}
       <div className="chat-bubble response">
-        <div className="chat-meta">GPT</div>
         <div className="chat-stream">
           <AnimatePresence initial={false}>
             {isLoading && (
