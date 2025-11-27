@@ -1,14 +1,13 @@
-import { PageTransition } from '../components/PageTransition'
-import { Section } from '../components/Section'
-import { Card, Tag } from '../components/UI'
-import { posts } from '../data/siteData'
+import { PageTransition } from "../components/PageTransition";
+import { Section } from "../components/Section";
+import { Card, Tag } from "../components/UI";
+import { posts } from "../data/siteData";
 
 export default function Blog() {
   return (
     <PageTransition>
       <div className="container page">
         <Section
-          eyebrow="Writing"
           title="Notes on building"
           description="Brief thoughts on design and product."
         >
@@ -31,5 +30,5 @@ export default function Blog() {
         </Section>
       </div>
     </PageTransition>
-  )
+  );
 }

@@ -1,13 +1,12 @@
-import { PageTransition } from '../components/PageTransition'
-import { Section } from '../components/Section'
-import { quickFacts } from '../data/siteData'
+import { PageTransition } from "../components/PageTransition";
+import { Section } from "../components/Section";
+import { quickFacts } from "../data/siteData";
 
 export default function About() {
   return (
     <PageTransition>
       <div className="container page">
         <Section
-          eyebrow="About"
           title="Hi, I’m Rohan."
           description="I focus on calm, minimal experiences."
         >
@@ -34,5 +33,5 @@ export default function About() {
         </Section>
       </div>
     </PageTransition>
-  )
+  );
 }

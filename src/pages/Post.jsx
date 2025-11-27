@@ -1,16 +1,13 @@
-import { useMemo } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { PageTransition } from '../components/PageTransition'
-import { Tag } from '../components/UI'
-import { posts } from '../data/siteData'
+import { useMemo } from "react";
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { PageTransition } from "../components/PageTransition";
+import { Tag } from "../components/UI";
+import { posts } from "../data/siteData";
 
 export default function Post() {
-  const { slug } = useParams()
-  const post = useMemo(
-    () => posts.find((item) => item.slug === slug),
-    [slug],
-  )
+  const { slug } = useParams();
+  const post = useMemo(() => posts.find((item) => item.slug === slug), [slug]);
 
   if (!post) {
     return (
@@ -23,7 +20,7 @@ export default function Post() {
           </Link>
         </div>
       </PageTransition>
-    )
+    );
   }
 
   return (
@@ -56,5 +53,5 @@ export default function Post() {
         </Link>
       </div>
     </PageTransition>
-  )
+  );
 }

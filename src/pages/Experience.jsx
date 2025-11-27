@@ -1,14 +1,13 @@
-import { PageTransition } from '../components/PageTransition'
-import { Section } from '../components/Section'
-import { Card, Tag } from '../components/UI'
-import { experiences } from '../data/siteData'
+import { PageTransition } from "../components/PageTransition";
+import { Section } from "../components/Section";
+import { Card, Tag } from "../components/UI";
+import { experiences } from "../data/siteData";
 
 export default function Experience() {
   return (
     <PageTransition>
       <div className="container page">
         <Section
-          eyebrow="Experience"
           title="Building minimal, expressive products"
           description="Snapshots of recent roles."
         >
@@ -34,5 +33,5 @@ export default function Experience() {
         </Section>
       </div>
     </PageTransition>
-  )
+  );
 }
