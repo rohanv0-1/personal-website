@@ -36,6 +36,12 @@
   letter-spacing: 0;
 }
 
+.brand-home {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .brand-dot {
   width: 12px;
   height: 12px;
@@ -45,6 +51,11 @@
   display: inline-block;
   transform-origin: center;
   animation: brand-pulse 8s ease-in-out infinite;
+}
+
+.brand-word {
+  display: inline-flex;
+  min-width: 9ch;
 }
 
 @keyframes brand-pulse {
