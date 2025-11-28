@@ -92,8 +92,7 @@ export const posts = [
 ];
 
 export const socials = [
-  { label: "Email", href: "mailto:hello@rohan.build" },
-  { label: "LinkedIn", href: "https://www.linkedin.com" },
-  { label: "GitHub", href: "https://github.com" },
-  { label: "RSS", href: "/rss.xml" },
+  { label: "Email", href: "mailto:roverma@gmail.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/rohanver" },
+  { label: "GitHub", href: "https://github.com/rohanv0-1" },
 ];

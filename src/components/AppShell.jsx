@@ -14,9 +14,7 @@ export function AppShell({ children }) {
   return (
     <div className="app-shell">
       <SiteHeader />
-      <div className="content">
-        {children}
-      </div>
+      <div className="content">{children}</div>
       <SiteFooter />
     </div>
   );
@@ -109,7 +107,13 @@ function SiteFooter() {
         </div>
         <div className="socials">
           {socials.map((item) => (
-            <a key={item.label} href={item.href} className="nav-link muted">
+            <a
+              key={item.label}
+              href={item.href}
+              className="nav-link muted"
+              target={item.label !== "Email" ? "_blank" : undefined}
+              rel={item.label !== "Email" ? "noreferrer" : undefined}
+            >
               {item.label}
             </a>
           ))}
