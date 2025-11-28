@@ -13,7 +13,6 @@ const brandWords = ["tinkering...", "building...", "thinking...", "zooming..."];
 export function AppShell({ children }) {
   return (
     <div className="app-shell">
-      <RouteIndicator />
       <SiteHeader />
       <div className="content">
         {children}
@@ -121,24 +120,5 @@ function SiteFooter() {
 }
 
 function RouteIndicator() {
-  const location = useLocation();
-  const [visible, setVisible] = useState(false);
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    setVisible(true);
-    setProgress(20);
-    requestAnimationFrame(() => setProgress(100));
-    const hide = setTimeout(() => {
-      setVisible(false);
-      setProgress(0);
-    }, 400);
-    return () => clearTimeout(hide);
-  }, [location.pathname]);
-
-  return (
-    <div className={`route-indicator ${visible ? "visible" : ""}`}>
-      <span style={{ transform: `scaleX(${progress / 100})` }} />
-    </div>
-  );
+  return null;
 }
