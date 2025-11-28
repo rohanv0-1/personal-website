@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { socials } from "../data/siteData";
 
 const navItems = [
@@ -10,13 +10,13 @@ const navItems = [
 
 const brandWords = ["tinkering...", "building...", "thinking...", "zooming..."];
 
-export function AppShell() {
+export function AppShell({ children }) {
   return (
     <div className="app-shell">
       <RouteIndicator />
       <SiteHeader />
       <div className="content">
-        <Outlet />
+        {children}
       </div>
       <SiteFooter />
     </div>
