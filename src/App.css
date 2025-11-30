@@ -273,6 +273,10 @@
 }
 
 @media (max-width: 640px) {
+  .site-header .header-grid {
+    padding-inline: 1.5rem;
+  }
+
   .header-grid {
     grid-template-columns: auto 1fr auto;
   }
