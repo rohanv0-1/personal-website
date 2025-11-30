@@ -7,7 +7,7 @@ export default function Blog() {
   return (
     <PageTransition>
       <div className="container page">
-        <Section title="A collection of random thoughts">
+        <Section title="Thoughts coming soon!">
           <div className="stack">
             {posts.map((post) => (
               <Card key={post.slug} to={`/blog/${post.slug}`}>
