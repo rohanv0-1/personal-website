@@ -274,7 +274,7 @@
 
 @media (max-width: 640px) {
   .site-header .header-grid {
-    padding-inline: 1.5rem;
+    padding-inline: 1rem;
   }
 
   .header-grid {
