@@ -1,17 +1,16 @@
 import { PageTransition } from "../components/PageTransition";
-import { ChatResponse } from "../components/ChatResponse";
-import { experienceAnswer, experienceRichAnswer } from "../data/siteData";
+import { StreamResponse } from "../components/StreamResponse";
+import { educationRichAnswer, experienceRichAnswer } from "../data/siteData";
+
+const experiencePageRichAnswer = `<h3>Experience</h3>${experienceRichAnswer}${
+  educationRichAnswer ? `<h3>Education</h3>${educationRichAnswer}` : ""
+}`;
 
 export default function Experience() {
   return (
     <PageTransition>
       <div className="container page">
-        <ChatResponse
-          answer={experienceAnswer}
-          richAnswer={experienceRichAnswer}
-          showPrompt={false}
-          speed={10}
-        />
+        <StreamResponse content={experiencePageRichAnswer} speed={10} />
       </div>
     </PageTransition>
   );

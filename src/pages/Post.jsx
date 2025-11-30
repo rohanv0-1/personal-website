@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/PageTransition";
-import { ChatResponse } from "../components/ChatResponse";
 import { Tag } from "../components/UI";
 import { posts } from "../data/siteData";
 
@@ -31,11 +30,13 @@ export default function Post() {
           {post.date} · {post.readTime}
         </div>
         <h1>{post.title}</h1>
-        <div className="tags-row">
-          {post.tags.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
-        </div>
+        {post.tags?.length ? (
+          <div className="tags-row">
+            {post.tags.map((tag) => (
+              <Tag key={tag}>{tag}</Tag>
+            ))}
+          </div>
+        ) : null}
         <div className="post-body">
           {post.body.map((paragraph, idx) => (
             <motion.p

@@ -1,5 +1,4 @@
 import { PageTransition } from "../components/PageTransition";
-import { ChatResponse } from "../components/ChatResponse";
 import { Section } from "../components/Section";
 import { Card, Tag } from "../components/UI";
 import { posts } from "../data/siteData";
@@ -8,10 +7,7 @@ export default function Blog() {
   return (
     <PageTransition>
       <div className="container page">
-        <Section
-          title="Notes on building"
-          description="Brief thoughts on design and product."
-        >
+        <Section title="A collection of random thoughts">
           <div className="stack">
             {posts.map((post) => (
               <Card key={post.slug} to={`/blog/${post.slug}`}>
@@ -20,11 +16,13 @@ export default function Blog() {
                 </div>
                 <h3>{post.title}</h3>
                 <p className="muted">{post.excerpt}</p>
-                <div className="tags-row">
-                  {post.tags.map((tag) => (
-                    <Tag key={tag}>{tag}</Tag>
-                  ))}
-                </div>
+                {post.tags?.length ? (
+                  <div className="tags-row">
+                    {post.tags.map((tag) => (
+                      <Tag key={tag}>{tag}</Tag>
+                    ))}
+                  </div>
+                ) : null}
               </Card>
             ))}
           </div>

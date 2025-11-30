@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { PageTransition } from "../components/PageTransition";
-import { ChatResponse } from "../components/ChatResponse";
+import { StreamResponse } from "../components/StreamResponse";
 
 export default function About() {
   const richAbout = useMemo(
@@ -12,12 +12,7 @@ export default function About() {
   return (
     <PageTransition>
       <div className="container page">
-        <ChatResponse
-          prompt="Who are you and what do you focus on?"
-          answer="I’m Rohan, a product engineer who builds calm, minimal experiences with clear interaction design."
-          richAnswer={richAbout}
-          showPrompt={false}
-        />
+        <StreamResponse content={richAbout} />
       </div>
     </PageTransition>
   );

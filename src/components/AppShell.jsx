@@ -8,7 +8,13 @@ const navItems = [
   { label: "Blog", to: "/blog" },
 ];
 
-const brandWords = ["tinkering...", "building...", "thinking...", "zooming..."];
+const brandWords = [
+  "tinkering...",
+  "building...",
+  "thinking...",
+  "zooming...",
+  "coding...",
+];
 
 export function AppShell({ children }) {
   return (
@@ -103,7 +109,7 @@ function SiteFooter() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <p className="muted">Let’s build something calm and intentional.</p>
+          <p className="muted"></p>
         </div>
         <div className="socials">
           {socials.map((item) => (
