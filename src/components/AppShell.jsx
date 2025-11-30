@@ -13,7 +13,7 @@ const brandWords = [
   "building...",
   "thinking...",
   "zooming...",
-  "coding...",
+  "coding..",
 ];
 
 export function AppShell({ children }) {

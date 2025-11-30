@@ -1,13 +1,3 @@
-export const hero = {
-  name: "Rohan",
-  title: "Product engineer",
-  blurb: "I build clean, fast web experiences with a calm touch.",
-  ctaPrimary: "Experience",
-  ctaSecondary: "Writing",
-  location: "Based in",
-  city: "San Francisco",
-};
-
 export const experiences = [
   {
     role: "AI Infra",
