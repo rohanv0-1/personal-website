@@ -48,7 +48,7 @@ export const experienceContent = `
 
 export const aboutContent = `
 <h2>Hi, I'm Rohan</h2>
-<p> I will write an intro soon! </p>
+<p> <a href="mailto:roverma@gmail.com">roverma [at] gmail.com </a></p>
 `;
 
 export const posts = [];
