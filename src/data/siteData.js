@@ -15,7 +15,7 @@ export const experienceContent = `
 <div>
   <h3>Software Engineer Intern · <a href="https://www.microsoft.com/en-us/edge/features/bing-chat" target="_blank" rel="noopener noreferrer">Microsoft</a></h3>
   <p>2022, 2023 · Redmond, WA</p>
-  Built ML infra for Edge Analytics and Bing Chat (Copilot) features for Edge
+  Built ML infra and Bing Chat (Copilot) features for Edge
 </div>
 <hr class="exp-sep" />
 <div>
