@@ -82,7 +82,7 @@ function SiteHeader() {
             {brandWord}
           </span>
         </div>
-        <nav className={`nav ${open ? "open" : ""}`}>
+        <nav id="site-nav" className={`nav ${open ? "open" : ""}`}>
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -95,7 +95,13 @@ function SiteHeader() {
             </NavLink>
           ))}
         </nav>
-        <button className="nav-toggle" onClick={() => setOpen((v) => !v)}>
+        <button
+          className="nav-toggle"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="site-nav"
+        >
           <span />
           <span />
         </button>
