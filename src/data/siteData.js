@@ -42,7 +42,7 @@ export const experienceContent = `
 <div>
   <h3>The Wharton School, <a href="https://undergrad.wharton.upenn.edu/" target="_blank" rel="noopener noreferrer">B.S. Economics</a></h3>
       <p>Sep 2020 - May 2024 · Philadelphia, PA</p>
-  Learned about creating shareholder value
+  Learned how to create shareholder value
 </div>
 `;
 
