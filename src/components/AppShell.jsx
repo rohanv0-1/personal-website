@@ -14,7 +14,7 @@ const brandWords = [
   "thinking...",
   "zooming...",
   "coding...",
-];
+].sort(() => Math.random() - 0.5);
 
 export function AppShell({ children }) {
   return (

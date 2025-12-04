@@ -10,6 +10,7 @@
   --shadow: none;
   --radius: 8px;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --bubble-padding: clamp(0.95rem, 1.8vw, 1.2rem);
   --container-padding: clamp(1rem, 3vw, 1.4rem);
   --content-max: min(1100px, calc(100vw - (var(--container-padding) * 2)));
   font-family: var(--font-mono);
