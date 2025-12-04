@@ -1,35 +1,48 @@
 import { useEffect, useMemo, useState } from "react";
 
-export function StreamResponse({ content, speed = 16 }) {
+export function StreamResponse({ content, speed = 8 }) {
   const [displayed, setDisplayed] = useState("");
 
-  const tokens = useMemo(() => {
-    if (!content) return null;
-    return content.match(/<[^>]+>|[^<]+/g) ?? [];
+  const frames = useMemo(() => {
+    if (!content) return [];
+
+    const tokens = content.match(/<[^>]+>|[^<]+/g) ?? [];
+    const steps = [];
+    let acc = "";
+
+    tokens.forEach((token) => {
+      const isTag = token.startsWith("<") && token.endsWith(">");
+      if (isTag) {
+        acc += token;
+        steps.push(acc);
+        return;
+      }
+
+      const words = token.match(/\S+\s*/g) ?? [];
+      words.forEach((word) => {
+        acc += word;
+        steps.push(acc);
+      });
+    });
+
+    return steps;
   }, [content]);
 
   useEffect(() => {
     setDisplayed("");
-    if (!content?.length) return;
+    if (!frames.length) return;
 
-    const useTokens = Boolean(tokens && tokens.length);
     let index = 0;
     const interval = setInterval(() => {
+      setDisplayed(frames[index]);
       index += 1;
-      if (useTokens) {
-        setDisplayed(tokens.slice(0, index).join(""));
-        if (index >= tokens.length) {
-          clearInterval(interval);
-        }
-        return;
-      }
-      setDisplayed(content.slice(0, index));
-      if (index >= content.length) {
+      if (index >= frames.length) {
         clearInterval(interval);
       }
     }, speed);
+
     return () => clearInterval(interval);
-  }, [content, tokens, speed]);
+  }, [frames, speed]);
 
   return (
     <div className="chat-shell" aria-live="polite">

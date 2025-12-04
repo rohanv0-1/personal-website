@@ -38,17 +38,13 @@ export default function Post() {
           </div>
         ) : null}
         <div className="post-body">
-          {post.body.map((paragraph, idx) => (
-            <motion.p
-              key={paragraph}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05 }}
-              className="muted"
-            >
-              {paragraph}
-            </motion.p>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2 }}
+            className="post-block"
+            dangerouslySetInnerHTML={{ __html: post.body }}
+          />
         </div>
         <Link className="nav-link muted back-link" to="/blog">
           ← Back to writing
