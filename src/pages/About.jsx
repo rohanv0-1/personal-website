@@ -14,7 +14,7 @@ export default function About() {
     <PageTransition>
       <div className="container page">
         <div className="about-layout">
-          <StreamResponse content={aboutContent} />
+          <StreamResponse content={aboutContent} speed={4} />
           <div className="about-photo">
             <div className="about-photo-frame">
               {hasPhoto ? (
@@ -24,7 +24,10 @@ export default function About() {
                   className="about-photo-img"
                 />
               ) : (
-                <div className="about-photo-placeholder" aria-label="Rohan Verma">
+                <div
+                  className="about-photo-placeholder"
+                  aria-label="Rohan Verma"
+                >
                   <span>Rohan Verma</span>
                 </div>
               )}
