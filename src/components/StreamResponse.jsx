@@ -18,7 +18,8 @@ export function StreamResponse({ content, speed = 8 }) {
         return;
       }
 
-      const words = token.match(/\S+\s*/g) ?? [];
+      // Include leading spaces so we don't drop whitespace that belongs before the word
+      const words = token.match(/\s*\S+\s*/g) ?? [];
       words.forEach((word) => {
         acc += word;
         steps.push(acc);
