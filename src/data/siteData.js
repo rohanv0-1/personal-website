@@ -40,8 +40,8 @@ export const experienceContent = `
 `;
 
 export const aboutContent = `
-<h2>Hi, I'm Rohan</h2>
-<p>and I'm building AI infrastructure at Meta and designing frameworks for AI agents to accelerate developer productivity and ensure a high quality bar through AI governance. I've also worked on product features at WhatsApp with a focus on integrating voice and image models and tackling various mobile infra optimizations along the way.
+<h2>Hi, I'm Rohan.</h2>
+<p>I build AI infrastructure at Meta and design frameworks for AI agents that accelerate developer productivity while ensuring a high quality bar through various AI governance efforts. I've also worked on product features at WhatsApp with a focus on integrating voice and image models and tackling various mobile infra optimizations along the way.
 
 I graduated from the University of Pennsylvania with a dual-degree in computer science and finance. During college, I did research at the <a href="https://www/grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP lab</a> and I was a graduate teaching assistant for machine learning, operating systems, algorithms, cloud computing and discrete mathematics.
 
