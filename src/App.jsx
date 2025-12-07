@@ -8,6 +8,7 @@ import Post from "./pages/Post";
 import { AppShell } from "./components/AppShell";
 import About from "./pages/About";
 import { posts } from "./data/siteData";
+import { StreamResponse } from "./components/StreamResponse";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -20,8 +21,11 @@ function ScrollToTop() {
 function NotFound() {
   return (
     <div className="container page">
-      <h2>Page missing</h2>
-      <p className="muted">The page you were looking for does not exist.</p>
+      <StreamResponse
+        content={
+          '<h2>Page missing</h2><p className="muted">The page you were looking for does not exist.</p>'
+        }
+      />
     </div>
   );
 }
@@ -42,8 +46,9 @@ export default function App() {
           <Routes location={location} key={location.pathname}>
             <Route index element={<About />} />
             <Route path="/experience" element={<Experience />} />
+            {/* Will publish after first blog!
             <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<Post />} />
+            <Route path="/blog/:slug" element={<Post />} /> */}
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

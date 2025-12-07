@@ -5,7 +5,7 @@ import { socials } from "../data/siteData";
 const navItems = [
   { label: "About", to: "/" },
   { label: "Experience", to: "/experience" },
-  { label: "Blog", to: "/blog" },
+  /*{ label: "Blog", to: "/blog" },*/
 ];
 
 const brandWords = [
