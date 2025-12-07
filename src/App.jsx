@@ -38,7 +38,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <AppShell>
-        <AnimatePresence initial={false} mode="wait">
+        <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route index element={<About />} />
             <Route path="/experience" element={<Experience />} />
