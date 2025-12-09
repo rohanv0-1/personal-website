@@ -7,6 +7,7 @@ import Blog from "./pages/Blog";
 import Post from "./pages/Post";
 import { AppShell } from "./components/AppShell";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 import { posts } from "./data/siteData";
 import { StreamResponse } from "./components/StreamResponse";
 
@@ -46,6 +47,7 @@ export default function App() {
           <Routes location={location} key={location.pathname}>
             <Route index element={<About />} />
             <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
             {/* Will publish after first blog!
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<Post />} /> */}
@@ -61,6 +63,7 @@ export default function App() {
 function getPageTitle(pathname) {
   if (pathname === "/" || pathname === "/about") return "About";
   if (pathname.startsWith("/experience")) return "Experience";
+  if (pathname.startsWith("/projects")) return "Projects";
   if (pathname === "/blog") return "Blog";
   if (pathname.startsWith("/blog/")) {
     const slug = pathname.split("/")[2] ?? "";

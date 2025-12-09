@@ -198,6 +198,11 @@ button {
   box-shadow: var(--shadow);
 }
 
+.stream-text .project-desc {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .chat-bubble p {
   margin: 0;
 }
@@ -207,6 +212,14 @@ button {
   border: none;
   border-bottom: 1px solid rgba(31, 41, 51, 0.15);
   margin: 0.8rem 0;
+}
+
+.exp-sep-projects {
+  margin: 0;
+}
+
+.project-break {
+  height: 0.4rem;
 }
 
 @keyframes chat-bounce {
@@ -323,9 +336,8 @@ button {
 }
 
 .card {
-  border-left: 2px solid var(--border);
   border-radius: 0;
-  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  padding: 0;
   background: transparent;
   box-shadow: none;
   height: 100%;
@@ -338,6 +350,26 @@ button {
 .card-link {
   color: inherit;
   text-decoration: none;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 1px;
+}
+
+.icon-inline {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.icon-link svg {
+  width: 1em;
+  height: 1em;
 }
 
 .nav-link {
