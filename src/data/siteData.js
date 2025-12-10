@@ -82,7 +82,7 @@ export const projects = [
   {
     title: "A Case study in LLM Negotiations",
     description:
-      "We evaluated LLM negotiation by simulating an eight-month pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
+      "We evaluated LLM negotiation by simulating an eight-month oil pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
     tech: ["LLMs", "Prompt Engineering"],
     github: "",
     pdf: "https://drive.google.com/file/d/18S-M0DNF-DT_B86kfkhO0PQGnmqP_Oi_/view?usp=sharing",

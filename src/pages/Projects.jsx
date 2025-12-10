@@ -56,9 +56,7 @@ export default function Projects() {
         '<div class="project-break"></div><hr class="exp-sep exp-sep-projects" /><div class="project-break"></div>'
       );
 
-    return `
-      <h2>Projects</h2>
-      ${entries}
+    return `${entries}
     `;
   }, []);
 
