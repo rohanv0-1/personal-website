@@ -199,8 +199,6 @@ button {
 }
 
 .stream-text .project-desc {
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 .chat-bubble p {
@@ -219,7 +217,7 @@ button {
 }
 
 .project-break {
-  height: 0.4rem;
+  height: 1.2rem;
 }
 
 @keyframes chat-bounce {
@@ -237,6 +235,14 @@ button {
 
 .muted {
   color: var(--muted);
+}
+
+.private-note {
+  font-size: 0.75rem;
+}
+
+.private-note em {
+  font-synthesis: style;
 }
 
 .lead {

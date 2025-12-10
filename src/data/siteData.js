@@ -52,52 +52,47 @@ export const posts = [];
 
 export const projects = [
   {
-    title: "Project Shinkansen: A Better Way to Plan Trips",
+    title: "Project Shinkansen: A Faster Way to Plan Trips",
     description:
-      "Originally created to help with planning my solo trip to Japan (October 2025), this app combines geospatial intelligence, agentic AI, and real-time collaboration to modernize travel planning. Users can build mapped itineraries, while a location-optimization engine recommends neighborhoods that minimize travel friction across walking and public transport. An autonomous AI assistant researches activities, processes search results, and adds suggestions directly to the plan. Itineraries sync seamlessly with Google Maps and calendar services. The platform also supports Google-Docs-style collaboration with presence indicators and public itinerary sharing for fellow travelers.",
-    tech: [
-      "MCP Server",
-      "Agentic AI",
-      "NodeJS",
-      "React",
-      "Maps API",
-      "+ Partially Agent Coded",
-    ],
-    github: "",
-    pdf: "",
-    demo: "Demo",
-  },
-  {
-    title: "Course Odyssey: Personalized course planning for Penn students",
-    description:
-      "We built a course-planning system for Penn students that automatically generates a semester-by-semester degree path satisfying all graduation requirements across multiple majors, minors, and degree programs. The planner respects the full prerequisite and corequisite graph, incorporates historical course-offering data to determine which classes run in fall vs. spring, and integrates course-review metadata. A semantic-search RAG interface allows students to find courses of interest and automatically map them to applicable requirements, optimizing for double-counting where possible. The backend uses an SAT-solver-driven objective function—minimizing workload or difficulty, or maximizing professor ratings—to produce an optimized and feasible academic schedule.",
-    tech: ["NodeJS", "Python", "RAG", "React", "SAT solver"],
+      "Built originally for my solo trip to Japan, this app blends geospatial intelligence, agentic AI, and real-time collaboration to modernize travel planning. It auto-optimizes neighborhoods to reduce transit friction and uses an autonomous AI assistant to research and add activities. Itineraries sync seamlessly with Google Maps and calendars, and the platform supports Google-Docs-style collaboration and public sharing.<p class='muted private-note'><em>\nDemo coming soon!</em></p>",
+    tech: ["Agentic AI", "NodeJS", "React", "Various Google APIs"],
     github: "",
     pdf: "",
     demo: "",
   },
   {
-    title: "Pix-2-pix in Gelogy",
+    title: "Course Odyssey: Personalized course planning for Penn students",
     description:
-      "I worked as a Computer Vision Researcher in Penn’s GRASP Autonomous Robotics Lab, where I built a GAN-based image-translation model to automatically detect bedding planes in geological datasets, achieving state-of-the-art performance. I developed the complete end-to-end pipeline—from data acquisition and curation to model training, evaluation, and on-demand inference—and later extended a variant of the system for thoracic surgical applications in collaboration with Harvard Medical School.",
-    tech: [""],
+      "A Penn course-planner that generates multi-degree semester plans by enforcing all pre/co-requisites, using historical offerings and reviews, and employing a RAG interface with a SAT-solver that optimally maps courses to requirements with maximal overlap/double-counting.",
+    tech: ["NodeJS", "Python", "RAG", "React", "SAT solver"],
     github: "",
     pdf: "",
+    demo: "",
+    collaboratorRestricted: true,
+  },
+  {
+    title: "Extending pix2pix to Autonomous Drones",
+    description:
+      "Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference, and later adapting the system for thoracic surgery in collaboration with Harvard Medical School researchers.",
+    tech: ["TensorFlow", "OpenCV", "GAN"],
+    github: "",
+    pdf: "https://drive.google.com/file/d/1sYh-skrNlkG-dOa-GWb5fG5AHJCHII2S/view?usp=sharing",
     demo: "",
   },
   {
     title: "PennOS: Unix-like terminal with process scheduling",
     description:
-      "Developed a complete Unix-like terminal and shell backed by a custom FAT-inspired filesystem and an original process-scheduling subsystem. The project implemented canonical Unix utilities (e.g., ls, cat, cp, rm, etc.) and supported job-control semantics such as background/foreground execution, pipelines, and multi-process orchestration. The system included our own file-allocation structures, directory management, command interpreter, and a scheduler capable of handling concurrent processes and pipe-based I/O streams.",
+      "Built a full Unix-like terminal and shell with a custom FAT-style filesystem, original process scheduler, and support for job control—including pipelines, background/foreground execution, and multi-process coordination—alongside implementations of core Unix utilities.",
     tech: ["C++", "Threads", "Virtual Pages"],
     github: "",
     pdf: "",
     demo: "",
+    collaboratorRestricted: true,
   },
   {
     title: "PennCloud: Distributed file storage and mail service system",
     description:
-      "We built PennCloud, a distributed cloud platform featuring a service-oriented backend architecture with a replicated key-value store, fault detection, remote recovery, and dynamic load balancing. The system partitions data into tablets replicated across storage nodes, using a primary-based protocol combined with two-phase commit to guarantee consistency. We implemented health monitoring via heartbeat services, checkpointing and log-based recovery, and gRPC-based streaming for efficient transfer of large state files. The frontend included a mail client, file-storage system, and admin console, all backed by gRPC calls, with load-balanced frontend servers handling concurrent HTTP requests. The result was a fault-tolerant, multi-service cloud environment supporting email, storage, and administration workflows end-to-end. ",
+      "A fault-tolerant distributed cloud platform with a service-oriented backend, replicated tablet-based key-value storage using primary + 2PC, heartbeat-driven failure detection, checkpoint/log recovery, gRPC streaming for large-state transfer, and load-balanced frontend services for mail, file storage, and admin tools.",
     tech: ["C++", "gRPC", "Distributed Systems"],
     github: "",
     pdf: "https://drive.google.com/file/d/1SlRI3KxiiZf7ZGCwTr7UCTFO5044DZ8G/view?usp=sharing",
@@ -106,16 +101,17 @@ export const projects = [
   {
     title: "PennBook: Mini-facebook with distributed pagerank",
     description:
-      "We built a mini–Facebook-style social platform implementing core features such as user friending, real-time online presence indicators, a dynamic interest-driven news feed powered by a distributed PageRank-like ranking algorithm, and full support for posts, comments, and reactions. The backend combined Java services for core social-graph and feed computation with Node-based APIs for interaction-heavy endpoints, all deployed on AWS with scalable storage, compute, and messaging components.",
+      "A Facebook-style social platform with friending, real-time presence, a socket-based chat system, and an interest-driven news feed powered by a distributed PageRank-like ranking algorithm, backed by Java services for graph/feed computation and Node APIs for interaction-heavy flows, all deployed on scalable AWS infrastructure.",
     tech: ["Java", "AWS", "DynamoDB", "AJAX", "NodeJS"],
     github: "",
     pdf: "",
     demo: "",
+    collaboratorRestricted: true,
   },
   {
     title: "A Case study in LLM Negotiations",
     description:
-      "This project evaluates how LLMs negotiate by simulating an eight-month pricing game between GPT-4, a negotiation-trained custom GPT-4, Claude 3 Opus, and human players. We find that baseline GPT-4 behaves conservatively and fails to reach the optimal cooperative equilibrium, while the custom GPT-4—augmented with negotiation principles—shows stronger long-term reasoning and cooperation. Claude 3 Opus demonstrates the most human-like strategy, sustaining cooperation and even exploiting final-round incentives. Overall, the study shows that LLMs can exhibit strategic, adaptive negotiation behavior, but their effectiveness depends heavily on domain-specific training and model design.",
+      "We evaluated LLM negotiation by simulating an eight-month pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
     tech: ["LLMs", "Prompt Engineering"],
     github: "",
     pdf: "https://drive.google.com/file/d/18S-M0DNF-DT_B86kfkhO0PQGnmqP_Oi_/view?usp=sharing",
@@ -124,7 +120,7 @@ export const projects = [
   {
     title: "F1 Scheduler: Optimizing an NP-Hard problem",
     description:
-      "We developed an optimization system that generates an optimal Formula 1 race calendar by integrating audience preferences, team track preferences, historical weather patterns, and track-to-track travel constraints. Using geospatial data (lat/long), temperature histories, and randomized audience scores for 75+ global circuits, the system models revenue and TV-rating drivers such as ideal weather proximity, distance from audience clusters, and team-specific track affinity. We additionally minimize logistical overhead by reducing sequential travel distances and allow organizers to configure season parameters such as start week and total race count. The pipeline unifies multiple datasets—from historical circuits, global weather archives, and team information—to compute a high-value, feasible tournament schedule under real-world constraints.",
+      "An F1 optimizer that fuses audience scores, team-track affinity models, weather histories, and geospatial travel data into a constrained scheduling algorithm that maximizes revenue/ratings while minimizing logistical travel to produce a feasible season schedule.",
     tech: ["React", "SAT Solver"],
     github: "https://github.com/rohanv0-1/f1-scheduler",
     pdf: "",
@@ -133,8 +129,8 @@ export const projects = [
   {
     title: "Dynamic Event Discovery by Non-Communicating Robot Swarms",
     description:
-      "This project introduces an improved swarm-robotics exploration algorithm for discovering dynamic events in unknown, obstacle-filled terrains without long-range communication.Building on a Wiener-process motion model, we augment the traditional Gaussian Random Walk with a recency-based cost estimator that guides robots toward less-visited regions while preserving stochastic exploration. Each robot maintains a local visitation map, with an extended variant enabling opportunistic short-range map sharing. Simulations across terrains of varying obstacle density show significantly faster and more consistent event-discovery times compared to standard random walks, demonstrating more uniform coverage, robustness to robot failures, and suitability for applications like forest-fire detection or ocean debris monitoring.",
-    tech: ["Java", "Robotics"],
+      "We introduce a swarm-robotics exploration algorithm that augments a Wiener-process random walk with a recency-driven visitation cost and optional short-range map sharing to achieve uniform coverage without long-range communication. Simulations show significantly faster, more robust event discovery in obstacle-rich terrains, with applications to forest-fire and ocean-debris detection.",
+    tech: ["Java", "Random Walks", "Swarm Communication"],
     github: "",
     pdf: "https://drive.google.com/file/d/1xl0IyNGMEYPiUVTowqTExveSomm1OPh4/view?usp=sharing",
     demo: "",
