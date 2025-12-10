@@ -71,12 +71,21 @@ export const projects = [
     collaboratorRestricted: true,
   },
   {
-    title: "Extending pix2pix to Autonomous Drones",
+    title: "PennCloud: Distributed file storage and mail service system",
     description:
-      "Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference, and later adapting the system for thoracic surgery in collaboration with Harvard Medical School researchers.",
-    tech: ["TensorFlow", "OpenCV", "GAN"],
+      "A fault-tolerant distributed cloud platform with a service-oriented backend, replicated tablet-based key-value storage using primary + 2PC, heartbeat-driven failure detection, checkpoint/log recovery, gRPC streaming for large-state transfer, and load-balanced frontend services for mail, file storage, and admin tools.",
+    tech: ["C++", "gRPC", "Distributed Systems"],
     github: "",
-    pdf: "https://drive.google.com/file/d/1sYh-skrNlkG-dOa-GWb5fG5AHJCHII2S/view?usp=sharing",
+    pdf: "https://drive.google.com/file/d/1SlRI3KxiiZf7ZGCwTr7UCTFO5044DZ8G/view?usp=sharing",
+    demo: "",
+  },
+  {
+    title: "A Case study in LLM Negotiations",
+    description:
+      "We evaluated LLM negotiation by simulating an eight-month pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
+    tech: ["LLMs", "Prompt Engineering"],
+    github: "",
+    pdf: "https://drive.google.com/file/d/18S-M0DNF-DT_B86kfkhO0PQGnmqP_Oi_/view?usp=sharing",
     demo: "",
   },
   {
@@ -90,12 +99,21 @@ export const projects = [
     collaboratorRestricted: true,
   },
   {
-    title: "PennCloud: Distributed file storage and mail service system",
+    title: "Extending pix2pix to Autonomous Drones",
     description:
-      "A fault-tolerant distributed cloud platform with a service-oriented backend, replicated tablet-based key-value storage using primary + 2PC, heartbeat-driven failure detection, checkpoint/log recovery, gRPC streaming for large-state transfer, and load-balanced frontend services for mail, file storage, and admin tools.",
-    tech: ["C++", "gRPC", "Distributed Systems"],
+      "Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference, and later adapting the system for thoracic surgery in collaboration with Harvard Medical School researchers.",
+    tech: ["TensorFlow", "OpenCV", "GAN"],
     github: "",
-    pdf: "https://drive.google.com/file/d/1SlRI3KxiiZf7ZGCwTr7UCTFO5044DZ8G/view?usp=sharing",
+    pdf: "https://drive.google.com/file/d/1sYh-skrNlkG-dOa-GWb5fG5AHJCHII2S/view?usp=sharing",
+    demo: "",
+  },
+  {
+    title: "F1 Scheduler: Optimizing an NP-Hard problem",
+    description:
+      "An F1 optimizer that fuses audience scores, team-track affinity models, weather histories, and geospatial travel data into a constrained scheduling algorithm that maximizes revenue/ratings while minimizing logistical travel to produce a feasible season schedule.",
+    tech: ["React", "SAT Solver"],
+    github: "https://github.com/rohanv0-1/f1-scheduler",
+    pdf: "",
     demo: "",
   },
   {
@@ -107,24 +125,6 @@ export const projects = [
     pdf: "",
     demo: "",
     collaboratorRestricted: true,
-  },
-  {
-    title: "A Case study in LLM Negotiations",
-    description:
-      "We evaluated LLM negotiation by simulating an eight-month pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
-    tech: ["LLMs", "Prompt Engineering"],
-    github: "",
-    pdf: "https://drive.google.com/file/d/18S-M0DNF-DT_B86kfkhO0PQGnmqP_Oi_/view?usp=sharing",
-    demo: "",
-  },
-  {
-    title: "F1 Scheduler: Optimizing an NP-Hard problem",
-    description:
-      "An F1 optimizer that fuses audience scores, team-track affinity models, weather histories, and geospatial travel data into a constrained scheduling algorithm that maximizes revenue/ratings while minimizing logistical travel to produce a feasible season schedule.",
-    tech: ["React", "SAT Solver"],
-    github: "https://github.com/rohanv0-1/f1-scheduler",
-    pdf: "",
-    demo: "",
   },
   {
     title: "Dynamic Event Discovery by Non-Communicating Robot Swarms",
