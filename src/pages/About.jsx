@@ -14,7 +14,7 @@ export default function About() {
     <PageTransition>
       <div className="container page">
         <div className="about-layout">
-          <StreamResponse content={aboutContent} speed={4} />
+          <StreamResponse content={aboutContent} speed={1} />
           <div className="about-photo">
             <div className="about-photo-frame">
               {hasPhoto ? (
