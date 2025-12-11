@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <PageTransition>
       <div className="container page">
-        <StreamResponse content={experienceContent} speed={4} />
+        <StreamResponse content={experienceContent} speed={1} />
       </div>
     </PageTransition>
   );
