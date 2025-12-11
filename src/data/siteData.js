@@ -52,10 +52,10 @@ export const posts = [];
 
 export const projects = [
   {
-    title: "Project Shinkansen: A Faster Way to Plan Trips",
+    title: "Project Shinkansen: Faster way to plan trips",
     description:
       "Built originally for my solo trip to Japan, this app blends geospatial intelligence, agentic AI, and real-time collaboration to modernize travel planning. It auto-optimizes neighborhoods to reduce transit friction and uses an autonomous AI assistant to research and add activities. Itineraries sync seamlessly with Google Maps and calendars, and the platform supports Google-Docs-style collaboration and public sharing.<p class='muted private-note'><em>\nDemo coming soon!</em></p>",
-    tech: ["Agentic AI", "NodeJS", "React", "Various Google APIs"],
+    tech: ["Agentic AI", "NodeJS", "React", "Multiple Google APIs"],
     github: "",
     pdf: "",
     demo: "",
@@ -80,10 +80,10 @@ export const projects = [
     demo: "",
   },
   {
-    title: "A Case study in LLM Negotiations",
+    title: "A Case Study in LLM Negotiations",
     description:
       "We evaluated LLM negotiation by simulating an eight-month oil pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
-    tech: ["LLMs", "Prompt Engineering"],
+    tech: ["LLMs", "Game Theory"],
     github: "",
     pdf: "https://drive.google.com/file/d/18S-M0DNF-DT_B86kfkhO0PQGnmqP_Oi_/view?usp=sharing",
     demo: "",
