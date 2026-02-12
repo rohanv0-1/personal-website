@@ -52,6 +52,21 @@ export const posts = [];
 
 export const projects = [
   {
+    title: "MemDex + MemDex-Fuse: RAG vs Agentic Retrieval",
+    description:
+      "Built two local-first memory indexes over WhatsApp data to compare retrieval strategies. MemDex uses a hybrid RAG stack (FTS5 + FAISS/HNSW embeddings + LLM evidence selection), while MemDex-Fuse exposes chats through a FUSE filesystem and lets an agent iteratively navigate the hierarchy to discover evidence paths. The agentic retrieval approach consistently outperformed static vector search on complex, multi-hop queries.",
+    tech: ["Python", "FAISS/HNSW", "FUSE", "Agentic Search"],
+    github: [
+      { href: "https://github.com/rohanv0-1/memdex", label: "MemDex" },
+      {
+        href: "https://github.com/rohanv0-1/memdex-fuse",
+        label: "MemDex-Fuse",
+      },
+    ],
+    pdf: "",
+    demo: "",
+  },
+  {
     title: "Project Shinkansen: Faster way to plan trips",
     description:
       "Built originally for my solo trip to Japan, this app blends geospatial intelligence, agentic AI, and real-time collaboration to modernize travel planning. It auto-optimizes neighborhoods to reduce transit friction and uses an autonomous AI assistant to research and add activities. Itineraries sync seamlessly with Google Maps and calendars, and the platform supports Google-Docs-style collaboration and public sharing.<p class='muted private-note'><em>\nDemo coming soon!</em></p>",

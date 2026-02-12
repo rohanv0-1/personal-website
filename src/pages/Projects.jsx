@@ -11,15 +11,28 @@ export default function Projects() {
     const entries = projects
       .map((project) => {
         const links = [];
-        const hasGithub = Boolean(project.github);
+        const githubLinks = Array.isArray(project.github)
+          ? project.github
+              .map((entry) =>
+                typeof entry === "string"
+                  ? { href: entry, label: "GitHub" }
+                  : { href: entry?.href, label: entry?.label || "GitHub" }
+              )
+              .filter((entry) => Boolean(entry.href))
+          : project.github
+          ? [{ href: project.github, label: "GitHub" }]
+          : [];
+        const hasGithub = githubLinks.length > 0;
         const hasPdf = Boolean(project.pdf);
         const hasDemo = Boolean(project.demo);
         const hasLinks = hasGithub || hasPdf || hasDemo;
 
         if (hasGithub) {
-          links.push(
-            `<a href="${project.github}" target="_blank" rel="noreferrer" class="icon-link"><img src="${githubIconUrl}" alt="GitHub" class="icon-inline" /><span>GitHub</span></a>`
-          );
+          githubLinks.forEach((entry) => {
+            links.push(
+              `<a href="${entry.href}" target="_blank" rel="noreferrer" class="icon-link"><img src="${githubIconUrl}" alt="GitHub" class="icon-inline" /><span>${entry.label}</span></a>`
+            );
+          });
         }
 
         if (hasPdf) {
