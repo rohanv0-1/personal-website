@@ -116,7 +116,7 @@ export const projects = [
   {
     title: "Extending pix2pix to Autonomous Drones",
     description:
-      "Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference, and later adapting the system for thoracic surgery in collaboration with Harvard Medical School researchers.",
+      "Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference. Extended the work and co-authored research on pulmonary artery detection in thoracic surgery using conditional GANs with Harvard Medical School, with the work <a href=\"https://caiire.mgh.harvard.edu/our-work/\" target=\"_blank\" rel=\"noreferrer\">presented at MICCAI 2022</a>.",
     tech: ["TensorFlow", "OpenCV", "GAN"],
     github: "",
     pdf: "https://drive.google.com/file/d/1sYh-skrNlkG-dOa-GWb5fG5AHJCHII2S/view?usp=sharing",
