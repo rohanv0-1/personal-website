@@ -56,11 +56,14 @@ export default function Projects() {
         return `
         <div>
           <h3>${project.title}</h3>
-          ${
-            project.tech?.length
-              ? `<p class="exp-meta">${project.tech.join(", ")}</p>`
-              : ""
-          }
+          <div class="project-meta-row">
+            ${
+              project.tech?.length
+                ? `<p class="exp-meta">${project.tech.join(", ")}</p>`
+                : `<p class="exp-meta"></p>`
+            }
+            <p class="project-date" aria-label="Project date">${project.date}</p>
+          </div>
           <p class="project-desc">${project.description}</p>
           ${linksMarkup}
         </div>`;

@@ -131,6 +131,26 @@ button {
   letter-spacing: -0.01em;
 }
 
+.stream-text .project-meta-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.stream-text .project-date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+
 .stream-text p {
   margin: 0 0 0.5rem 0;
 }
@@ -427,6 +447,17 @@ button {
 
 .route-indicator.visible {
   opacity: 1;
+}
+
+@media (max-width: 680px) {
+  .stream-text .project-meta-row {
+    gap: 0.2rem 0.75rem;
+  }
+
+  .stream-text .project-date {
+    font-size: 0.74rem;
+    text-align: right;
+  }
 }
 
 .route-indicator span {

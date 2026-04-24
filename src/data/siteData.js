@@ -53,6 +53,7 @@ export const posts = [];
 export const projects = [
   {
     title: "MemDex + MemDex-Fuse: RAG vs Agentic Retrieval",
+    date: "January 2026",
     description:
       "Built two local-first memory indexes over WhatsApp data to compare retrieval strategies. MemDex uses a hybrid RAG stack (FTS5 + FAISS/HNSW embeddings + LLM evidence selection), while MemDex-Fuse exposes chats through a FUSE filesystem and lets an agent iteratively navigate the hierarchy to discover evidence paths. The agentic retrieval approach consistently outperformed static vector search on complex, multi-hop queries.",
     tech: ["Python", "FAISS/HNSW", "FUSE", "Agentic Search"],
@@ -68,8 +69,9 @@ export const projects = [
   },
   {
     title: "Project Shinkansen: Faster way to plan trips",
+    date: "October 2025",
     description:
-      "Built originally for my solo trip to Japan, this app blends geospatial intelligence, agentic AI, and real-time collaboration to modernize travel planning. It auto-optimizes neighborhoods to reduce transit friction and uses an autonomous AI assistant to research and add activities. Itineraries sync seamlessly with Google Maps and calendars, and the platform supports Google-Docs-style collaboration and public sharing.<p class='muted private-note'><em>\nDemo coming soon!</em></p>",
+      "Built originally for my solo trip to Japan, this app blends geospatial intelligence, agentic AI, and real-time collaboration to modernize travel planning. It auto-optimizes neighborhoods to reduce transit friction and uses an autonomous AI assistant to research and add activities. Itineraries sync seamlessly with Google Maps and calendars, and the platform supports Google-Docs-style collaboration and public sharing.",
     tech: ["Agentic AI", "NodeJS", "React", "Multiple Google APIs"],
     github: "",
     pdf: "",
@@ -77,6 +79,7 @@ export const projects = [
   },
   {
     title: "Course Odyssey: Personalized course planning for Penn students",
+    date: "March 2024",
     description:
       "A Penn course-planner that generates multi-degree semester plans by enforcing all pre/co-requisites, using historical offerings and reviews, and employing a RAG interface with a SAT-solver that optimally maps courses to requirements with maximal overlap/double-counting.",
     tech: ["NodeJS", "Python", "RAG", "React", "SAT solver"],
@@ -87,6 +90,7 @@ export const projects = [
   },
   {
     title: "PennCloud: Distributed file storage and mail service system",
+    date: "March 2024",
     description:
       "A fault-tolerant distributed cloud platform with a service-oriented backend, replicated tablet-based key-value storage using primary + 2PC, heartbeat-driven failure detection, checkpoint/log recovery, gRPC streaming for large-state transfer, and load-balanced frontend services for mail, file storage, and admin tools.",
     tech: ["C++", "gRPC", "Distributed Systems"],
@@ -96,6 +100,7 @@ export const projects = [
   },
   {
     title: "A Case Study in LLM Negotiations",
+    date: "March 2024",
     description:
       "We evaluated LLM negotiation by simulating an eight-month oil pricing game between GPT-4, a negotiation-trained GPT-4, Claude 3 Opus, and human players. Baseline GPT-4 behaved conservatively, while the trained variant showed stronger long-term cooperation, and Claude 3 Opus displayed the most human-like, strategic behavior. Overall, the study highlights that LLM negotiation performance hinges on domain-specific training and model design.",
     tech: ["LLMs", "Game Theory"],
@@ -105,6 +110,7 @@ export const projects = [
   },
   {
     title: "PennOS: Unix-like terminal with process scheduling",
+    date: "October 2023",
     description:
       "Built a full Unix-like terminal and shell with a custom FAT-style filesystem, original process scheduler, and support for job control—including pipelines, background/foreground execution, and multi-process coordination—alongside implementations of core Unix utilities.",
     tech: ["C++", "Threads", "Virtual Pages"],
@@ -115,8 +121,9 @@ export const projects = [
   },
   {
     title: "Extending pix2pix to Autonomous Drones",
+    date: "May 2022",
     description:
-      "Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference. Extended the work and co-authored research on pulmonary artery detection in thoracic surgery using conditional GANs with Harvard Medical School, with the work <a href=\"https://caiire.mgh.harvard.edu/our-work/\" target=\"_blank\" rel=\"noreferrer\">presented at MICCAI 2022</a>.",
+      'Built a GAN-based image-translation model that achieved SOTA evals for geological bedding-plane detection, with a full end-to-end pipeline for data, training, and inference. Extended the work and co-authored research on pulmonary artery detection in thoracic surgery using conditional GANs with Harvard Medical School, with the work <a href="https://caiire.mgh.harvard.edu/our-work/" target="_blank" rel="noreferrer">presented at MICCAI 2022</a>.',
     tech: ["TensorFlow", "OpenCV", "GAN"],
     github: "",
     pdf: "https://drive.google.com/file/d/1sYh-skrNlkG-dOa-GWb5fG5AHJCHII2S/view?usp=sharing",
@@ -124,6 +131,7 @@ export const projects = [
   },
   {
     title: "F1 Scheduler: Optimizing an NP-Hard problem",
+    date: "March 2022",
     description:
       "An F1 optimizer that fuses audience scores, team-track affinity models, weather histories, and geospatial travel data into a constrained scheduling algorithm that maximizes revenue/ratings while minimizing logistical travel to produce a feasible season schedule.",
     tech: ["React", "SAT Solver"],
@@ -133,6 +141,7 @@ export const projects = [
   },
   {
     title: "PennBook: Mini-facebook with distributed pagerank",
+    date: "March 2022",
     description:
       "A Facebook-style social platform with friending, real-time presence, a socket-based chat system, and an interest-driven news feed powered by a distributed PageRank-like ranking algorithm, backed by Java services for graph/feed computation and Node APIs for interaction-heavy flows, all deployed on scalable AWS infrastructure.",
     tech: ["Java", "AWS", "DynamoDB", "AJAX", "NodeJS"],
@@ -143,6 +152,7 @@ export const projects = [
   },
   {
     title: "Dynamic Event Discovery by Non-Communicating Robot Swarms",
+    date: "June 2020",
     description:
       "We introduce a swarm-robotics exploration algorithm that augments a Wiener-process random walk with a recency-driven visitation cost and optional short-range map sharing to achieve uniform coverage without long-range communication. Simulations show significantly faster, more robust event discovery in obstacle-rich terrains, with applications to forest-fire and ocean-debris detection.",
     tech: ["Java", "Random Walks", "Swarm Communication"],
