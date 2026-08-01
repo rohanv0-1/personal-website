@@ -1,8 +1,13 @@
 export const experienceContent = `
 <h2>Experience</h2>
 <div>
+  <h3>Member of Technical Staff · <a href="https://openai.com/" target="_blank" rel="noopener noreferrer">OpenAI</a></h3>
+  <p class="exp-meta">Jul 2026 - Present · San Francisco, CA</p>Deploying and scaling AGI
+</div>
+<hr class="exp-sep" />
+<div>
   <h3>AI Infra · <a href="https://ai.meta.com/" target="_blank" rel="noopener noreferrer">Meta</a></h3>
-  <p class="exp-meta">Nov 2025 - Present · Menlo Park, CA</p>Creating agentic frameworks that are part of the daily developer lifecycle
+  <p class="exp-meta">Nov 2025 - Jun 2026 · Menlo Park, CA</p>Creating agentic frameworks that are part of the daily developer lifecycle
 </div>
 <hr class="exp-sep" />
 <div>
@@ -41,7 +46,7 @@ export const experienceContent = `
 
 export const aboutContent = `
 <h2>Hi, I'm Rohan</h2>
-<p>I build AI infrastructure at Meta and design frameworks for AI agents that accelerate developer productivity while ensuring a high quality bar through strong AI governance. I've also worked on product features at WhatsApp with a focus on integrating voice and image models and tackling various mobile infra optimizations along the way.
+<p>I'm a Member of Technical Staff at OpenAI, deploying and scaling AGI. Previously, I built AI infrastructure at Meta and worked on product features at WhatsApp, with a focus on integrating voice and image models and tackling various mobile infrastructure optimizations.
 
 I graduated from the University of Pennsylvania with a dual-degree in computer science and finance. During college, I did research at the <a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP lab</a> and I was a graduate teaching assistant for machine learning, operating systems, algorithms, cloud computing and discrete mathematics.
 

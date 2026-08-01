@@ -2,7 +2,7 @@
 
 ## Hi, I'm Rohan
 
-I build AI infrastructure at Meta and design frameworks for AI agents that accelerate developer productivity while ensuring a high quality bar through strong AI governance. I've also worked on product features at WhatsApp with a focus on integrating voice and image models and tackling various mobile infra optimizations along the way.
+I'm a Member of Technical Staff at OpenAI, deploying and scaling AGI. Previously, I built AI infrastructure at Meta and worked on product features at WhatsApp, with a focus on integrating voice and image models and tackling various mobile infrastructure optimizations.
 
 I graduated from the University of Pennsylvania with a dual-degree in computer science and finance. During college, I did research at the GRASP lab (https://www.grasp.upenn.edu/) and I was a graduate teaching assistant for machine learning, operating systems, algorithms, cloud computing and discrete mathematics.
 
